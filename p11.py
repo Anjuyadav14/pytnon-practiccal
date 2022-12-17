@@ -33,6 +33,27 @@ arr[j-1],arr[j]=arr[j],arr[j-1]
 j-=1
 return arr
 def selectionSort(arr):
+  c=int(input(" Enter your choice: "))
+print("*"*50)
+if c==1:
+arr=list(input("Enter the list:").split())
+key=input("Enter element to search:")
+print("Key found at:",linerSearch(arr,key))
+elif c==2:
+arr=list(input("Enter the list:").split())
+key=input("Enter element to search:")
+print("Key found at:",binarySearch(arr,key))
+elif c==3:
+arr=list(input("Enter the list:").split())
+print("List after Bubble Sort:",bubbleSort(arr))
+elif c==4:
+arr=list(input("Enter the list:").split())
+print("List after Insertion Sort:",insertionSort(arr))
+elif c==5:
+arr=list(input("Enter the list:").split())
+print("List after Selection Sort:",selectionSort(arr))
+else :
+exit
 for i in range(len(arr)):
 minpos=i
 for j in range(1,len(arr)+1):
